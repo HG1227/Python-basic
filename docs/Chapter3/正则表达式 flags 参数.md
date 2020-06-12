@@ -1,6 +1,6 @@
 # python 正则表达式 flags 参数
 
-﻿## flags参数
+## flags参数
 
 ```python
 re.I

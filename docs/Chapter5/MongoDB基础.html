@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>python MongoDB基础 · GitBook 使用教程</title>
+        <title>python MongoDB基础 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="zhangjikai">
+        <meta name="author" content="HHG">
         
         
-    
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
@@ -26,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -50,11 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
@@ -66,11 +61,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -101,11 +100,7 @@
         
     
 
-
-    
-
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -120,15 +115,6 @@
     
     
     <link rel="prev" href="./" />
-    
-
-    
-        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
-    
-    
-        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
-    
-    
     
 
     </head>
@@ -1277,7 +1263,7 @@
 <pre class="language-"><code class="lang-python">mongod <span class="token operator">-</span><span class="token operator">-</span>dbpath <span class="token operator">/</span>Users<span class="token operator">/</span>yurongchan<span class="token operator">/</span>mongodb_data_file
 </code></pre>
 <p>&#x7C7B;&#x4F3C;&#x7684;&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8FD8;&#x6709;&#xFF1A;
-<img src="https://img-blog.csdnimg.cn/2019110712222844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<a href="https://img-blog.csdnimg.cn/2019110712222844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="204c7dd0-1c3f-476c-b784-42993caf2ec3" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/2019110712222844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#x8FDE;&#x63A5;MongoDb&#x670D;&#x52A1;&#x5668;:
 &#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#x8FDE;&#x63A5;&#x5230; MongoDb &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;CURD&#x64CD;&#x4F5C;&#x3002;&#x8FDE;&#x63A5;MongoDb&#x670D;&#x52A1;&#x5668;&#x547D;&#x4EE4;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-python">mongo server_ip<span class="token punctuation">:</span>port<span class="token operator">/</span>dbname <span class="token operator">-</span>u user <span class="token operator">-</span>p password
@@ -1408,7 +1394,7 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
 </code></pre>
 <h2 id="&#x8303;&#x56F4;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x8303;&#x56F4;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8303;&#x56F4;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8303;&#x56F4;&#x64CD;&#x4F5C;&#x7B26;</h2>
 <p>&#x8303;&#x56F4;&#x64CD;&#x4F5C;&#x7B26;&#x6307;&#x7684;&#x662F;&#xFF1A;<code>&#x5927;&#x4E8E;</code>&#x3001;<code>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</code>&#x3001;<code>&#x7B49;&#x4E8E;</code>&#x3001;<code>&#x4E0D;&#x7B49;&#x4E8E;</code>&#x3001;<code>&#x5C0F;&#x4E8E;</code>&#x3001;<code>&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</code>&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x5728; MongoDb &#x4E2D;&#x5B83;&#x4EEC;&#x7684;&#x8868;&#x793A;&#x4EE5;&#x53CA;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x9762;&#x8868;&#x683C;&#x6240;&#x793A;&#xFF1A;
-<img src="https://img-blog.csdnimg.cn/2019110713390830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<a href="https://img-blog.csdnimg.cn/2019110713390830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="4cbea415-702d-44eb-a9b9-3f6d3afbe742" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/2019110713390830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#x4F8B;&#x5982;&#x6211;&#x8981;&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x8868;&#x4E2D;&#x6240;&#x6709;&#x5E74;&#x9F84;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;25&#x5C81;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x90A3;&#x4E48;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E3A;&#xFF1A;</p>
 <pre class="language-"><code class="lang-python">db<span class="token punctuation">.</span>user<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;age&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>$gte<span class="token punctuation">:</span><span class="token number">25</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">&quot;_id&quot;</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>pretty<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
@@ -1473,10 +1459,10 @@ where name <span class="token operator">=</span> <span class="token string">&quo
 </code></pre>
 <pre class="language-"><code class="lang-python">  <span class="token operator">&gt;</span>db<span class="token punctuation">.</span>orders<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;age&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span>$exists<span class="token punctuation">:</span>true<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20191107174253558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<p><a href="https://img-blog.csdnimg.cn/20191107174253558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="fb44f08d-5c24-497a-9a3e-37437669330b" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107174253558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
  &#x6CA1;&#x6709;age&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x8FD4;&#x56DE;
  &#x63D2;&#x5165;&#x6709;age&#x5143;&#x7D20;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x4E00;&#x4E0B;
- <img src="https://img-blog.csdnimg.cn/20191107174326625.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+ <a href="https://img-blog.csdnimg.cn/20191107174326625.png" data-lightbox="cbe05fbd-716b-42c1-bd25-97b0dbc3e4e8" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107174326625.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <h2 id="&#x5BF9;&#x6570;&#x7EC4;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;"><a name="&#x5BF9;&#x6570;&#x7EC4;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x6570;&#x7EC4;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;&#x6570;&#x7EC4;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;</h2>
 <pre class="language-"><code class="lang-python"> $<span class="token builtin">all</span>&#x3001;$size&#x3001;$<span class="token builtin">slice</span>&#x3001;$elemMatch
 </code></pre>
@@ -1501,7 +1487,7 @@ where name <span class="token operator">=</span> <span class="token string">&quo
 </code></pre>
 <pre class="language-"><code class="lang-python"> db<span class="token punctuation">.</span>orders<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;books&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span>$<span class="token builtin">all</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">&quot;java&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;mongo&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20191107200319219.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<p><a href="https://img-blog.csdnimg.cn/20191107200319219.png" data-lightbox="dd052a14-ff38-4fcf-a1ff-5ffaf8f83d03" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107200319219.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#x67E5;&#x627E;books&#x5305;&#x542B;java&#x3001;mongo&#x7684;&#x6587;&#x6863;&#x6570;&#x636E;</p>
 <p>&#xFF08;2&#xFF09;<code>$size</code> &#x67E5;&#x627E;&#x6570;&#x7EC4;&#x5927;&#x5C0F;&#x7B49;&#x4E8E;&#x6307;&#x5B9A;&#x503C;&#x7684;&#x6587;&#x6863;</p>
 <pre class="language-"><code class="lang-python">&#x8BED;&#x6CD5;&#xFF1A;
@@ -1509,7 +1495,7 @@ where name <span class="token operator">=</span> <span class="token string">&quo
 </code></pre>
 <pre class="language-"><code class="lang-python"><span class="token operator">&gt;</span>db<span class="token punctuation">.</span>orders<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;books&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span>$size<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20191107201120267.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<p><a href="https://img-blog.csdnimg.cn/20191107201120267.png" data-lightbox="8bd3c775-b87d-409f-ae04-b18524810399" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107201120267.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#xFF08;3&#xFF09;<code>$slice</code>&#x67E5;&#x8BE2;&#x6570;&#x7EC4;&#x4E2D;&#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;</p>
 <pre class="language-"><code class="lang-python"> &#x8BED;&#x6CD5;&#xFF1A;
  <span class="token operator">&gt;</span>db<span class="token punctuation">.</span>collect<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>field<span class="token punctuation">:</span><span class="token punctuation">{</span>$<span class="token builtin">slice</span><span class="token punctuation">:</span> number <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -1586,7 +1572,7 @@ number1&#x8BF4;&#x660E;&#xFF1A;
 <code>limit&#x65B9;&#x6CD5;</code>&#x662F;&#x9650;&#x5236;&#x6E38;&#x6807;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5982;&#x4E0B;&#x9762;&#x4F8B;&#x5B50;&#xFF1A;</p>
 <pre class="language-"><code class="lang-python"> <span class="token operator">&gt;</span>db<span class="token punctuation">.</span>items<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>limit<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
 </code></pre>
-<p> <img src="https://img-blog.csdnimg.cn/20191107203905397.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<p> <a href="https://img-blog.csdnimg.cn/20191107203905397.png" data-lightbox="c04ee222-036b-4e30-96b3-a17d2cbaaebf" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107203905397.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
  &#x53EA;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;5&#x6761;&#x6587;&#x6863;</p>
 </li>
 <li><p><code>sort()</code>&#x6392;&#x5E8F;
@@ -1615,7 +1601,7 @@ sort()&#x65B9;&#x6CD5;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#x6240;&#
 skip&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x503C;&#x7684;&#x6761;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x5269;&#x4E0B;&#x7684;&#x6761;&#x6570;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x8DDF;limit()&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x53EF;&#x4EE5;<code>&#x5B9E;&#x73B0;&#x5206;&#x9875;&#x7684;&#x6548;&#x679C;</code>&#x3002;</p>
 <pre class="language-"><code class="lang-python"> db<span class="token punctuation">.</span>items<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>skip<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span>limit<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
 </code></pre>
-<p> <img src="https://img-blog.csdnimg.cn/20191107204313767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<p> <a href="https://img-blog.csdnimg.cn/20191107204313767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="444a4980-fc62-457c-930c-f071f64c890e" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107204313767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
    &#x8DF3;&#x8FC7;&#x7B2C;10&#x6761;&#xFF0C;&#x4ECE;&#x7B2C;11&#x6761;&#x5F00;&#x59CB;&#x8FD4;&#x56DE;&#xFF0C;&#x53EA;&#x8FD4;&#x56DE;10&#x6761;&#x6587;&#x6863;.
    skip&#x65B9;&#x6CD5;&#x662F;&#x8DF3;&#x8FC7;&#x6761;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x4E00;&#x6761;&#x4E00;&#x6761;&#x7684;&#x8DF3;&#x8FC7;&#xFF0C;&#x5982;&#x679C;&#x96C6;&#x5408;&#x6BD4;&#x8F83;&#x5927;&#x65F6;&#xFF08;&#x5982;&#x4E66;&#x9875;&#x6570;&#x5F88;&#x591A;&#xFF09;skip&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x6162;, &#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x5904;&#x7406;&#x5668;(CPU)&#xFF0C;&#x8FD9;&#x4F1A;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#x3002;
    &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x6BD4;&#x8F83;&#x6709;&#x987A;&#x5E8F;&#x7684;&#x6765;&#x8FDB;&#x884C;&#x5206;&#x9875;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x907F;&#x514D;&#x4F7F;&#x7528;skip&#x65B9;&#x6CD5;&#x3002;</p>
@@ -1670,7 +1656,7 @@ skip&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x503C;&#x7
 <a href="https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/" target="_blank">db.collection.updateOne()</a>
 <a href="https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/" target="_blank">db.collection.updateMany()</a></p>
 <h2 id="&#x5BF9;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;"><a name="&#x5BF9;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;</h2>
-<p><img src="https://img-blog.csdnimg.cn/20191107160310359.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p><a href="https://img-blog.csdnimg.cn/20191107160310359.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="36f720a3-17d5-442f-8bad-e7e7e673c220" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107160310359.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p><font color="#6495ED" size="4">2) &#x91C7;&#x7528;<code>$set</code>&#x6765;&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4FEE;&#x6539;&#x6587;&#x6863;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x952E;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x521B;&#x5EFA;&#x5B83;&#x3002;</font></p>
 <pre class="language-"><code class="lang-python"><span class="token operator">&gt;</span> db<span class="token punctuation">.</span>orders<span class="token punctuation">.</span>update<span class="token punctuation">(</span>                          
    <span class="token punctuation">{</span><span class="token string">&quot;onumber&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;001&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -1698,7 +1684,7 @@ skip&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x503C;&#x7
 <span class="token punctuation">}</span>
 </code></pre>
 <p>&#x4FEE;&#x6539;&#x4E4B;&#x540E;&#xFF1A;
-<img src="https://img-blog.csdnimg.cn/20191107161122945.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<a href="https://img-blog.csdnimg.cn/20191107161122945.png" data-lightbox="b950851b-6b98-45be-a83e-e0d995bb4c83" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107161122945.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p><font color="#6495ED" size="4"> 4&#xFF09;<code>$setOnInsert</code>    &#x64CD;&#x4F5C;&#x65F6;,&#x64CD;&#x4F5C;&#x7ED9;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x6BB5;&#x8D4B;&#x503C;</font></p>
 <pre class="language-"><code class="lang-python">&#x8BED;&#x6CD5;&#xFF1A;
 
@@ -1709,7 +1695,7 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
 <span class="token punctuation">)</span>
 </code></pre>
 <h2 id="&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x4FEE;&#x6539;"><a name="&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x4FEE;&#x6539;</h2>
-<p><img src="https://img-blog.csdnimg.cn/20191107161418773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<p><a href="https://img-blog.csdnimg.cn/20191107161418773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="95d042c0-752f-455b-a220-cd673e79d214" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107161418773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#xFF08;1&#xFF09;&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4FEE;&#x6539;&#x6587;&#x6863;&#x91CC;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x7B2C;&#x4E8C;&#x5C42;&#x7EA7;&#x7684;&#xFF09;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x60F3;&#x4FEE;&#x6539;items &#x5B57;&#x6BB5;ino&#x4E3A;001&#x4E0B;&#x7684;price&#x7684;4&#x4FEE;&#x6539;8,&#x8BED;&#x6CD5;items.$. price &#xFF0C;&#x66F4;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x5B50;&#x6587;&#x6863;&#xFF0C;&#x6211;&#x4EEC;&#x5185;&#x5D4C;&#x6587;&#x6863;&#x7684;ino&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x6EE1;&#x8DB3;&#x6211;&#x4EEC;&#x7684;&#x9700;&#x6C42;</p>
 <pre class="language-"><code class="lang-python"><span class="token operator">&gt;</span>db<span class="token punctuation">.</span> orders<span class="token punctuation">.</span>update<span class="token punctuation">(</span>                          
     <span class="token punctuation">{</span><span class="token string">&quot;onumber&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;001&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;items.ino&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;001&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -1717,17 +1703,17 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
 <span class="token punctuation">)</span>
 </code></pre>
 <p>&#x4FEE;&#x6539;&#x524D;&#x7684;&#x6570;&#x636E;&#xFF1A;
-<img src="https://img-blog.csdnimg.cn/20191107164752619.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<a href="https://img-blog.csdnimg.cn/20191107164752619.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="5be49e4e-3004-4c12-909e-864ae936b455" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107164752619.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#x4FEE;&#x6539;&#x540E;&#x7684;&#x6570;&#x636E;&#xFF1A;
-<img src="https://img-blog.csdnimg.cn/20191107164833603.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+<a href="https://img-blog.csdnimg.cn/20191107164833603.png" data-lightbox="634cadb2-7963-4d5e-8015-b14def3e2190" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107164833603.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
 &#xFF08;2&#xFF09;&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4FEE;&#x6539;&#x6587;&#x6863;&#x91CC;&#x5185;&#x5D4C;&#x6587;&#x6863;&#x5728;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x7B2C;&#x4E09;&#x5C42;&#x7EA7;&#x7684;&#xFF09;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x60F3;&#x4FEE;&#x6539;items &#x5B57;&#x6BB5;ino&#x7B49;&#x4E8E;001&#x4E0B;&#x7684;products&#x5E76;&#x4E14;pno&#x7B49;&#x4E8E;001&#x7684;pName&#x503C;&#x4E3A;ps,&#x8BED;&#x6CD5;<code>items.0. products.$. pName</code>,0&#x4EE3;&#x8868;items&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x6807;&#xFF09;&#xFF0C;<code>$</code> &#x66F4;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x5B50;&#x6587;&#x6863;&#x3002;</p>
 <pre class="language-"><code class="lang-python"><span class="token operator">&gt;</span>db<span class="token punctuation">.</span> orders<span class="token punctuation">.</span>update<span class="token punctuation">(</span>                          
     <span class="token punctuation">{</span><span class="token string">&quot;onumber&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;001&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;items.ino&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;001&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;items.products.pno&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;001&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> $<span class="token builtin">set</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">&quot;items.0.products.$.pName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;ps&quot;</span><span class="token punctuation">}</span> <span class="token punctuation">}</span>
 <span class="token punctuation">)</span>
 </code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20191107165047378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
-<img src="https://img-blog.csdnimg.cn/20191107165120493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p><a href="https://img-blog.csdnimg.cn/20191107165047378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="22aa8885-70db-4085-b398-318dbe78dbdf" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107165047378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a>
+<a href="https://img-blog.csdnimg.cn/20191107165120493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" data-lightbox="c0b0c5bb-02c0-4f33-a90b-bae3e608767a" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20191107165120493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hIRzIwMTcxMjI2,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
 <p><font color="#6495ED" size="4">&#xFF08;3&#xFF09;<code>$pop</code>&#x5220;&#x9664;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6216;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9879;</font></p>
 <pre class="language-"><code class="lang-python"> &#x8BED;&#x6CD5;&#xFF1A;
 <span class="token punctuation">{</span> $pop<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token operator">&lt;</span>field<span class="token operator">&gt;</span><span class="token punctuation">:</span> <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
@@ -1787,8 +1773,8 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
 <p>&#x53C2;&#x8003;&#xFF1A;
 <a href="https://www.cnblogs.com/chanshuyi/p/quick_start_of_mongodb.html" target="_blank">MongoDb &#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6559;&#x7A0B;</a>
 <a href="https://segmentfault.com/a/1190000010556670" target="_blank">&#x7B80;&#x660E; MongoDB &#x5165;&#x95E8;&#x6559;&#x7A0B;</a> </p>
-<footer class="page-footer"><span class="copyright">   </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-25 21:42
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-05-25 
 </span></footer>
                                 
                                 </section>
@@ -1832,13 +1818,12 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"python MongoDB基础","level":"6.1.1","depth":2,"next":{"title":"python Python操作MongoDB","level":"6.1.2","depth":2,"path":"Chapter5/Python操作MongoDB.md","ref":"Chapter5/Python操作MongoDB.md","articles":[]},"previous":{"title":"python MongoDB数据库","level":"6.1","depth":1,"path":"Chapter5/README.md","ref":"Chapter5/README.md","articles":[{"title":"python MongoDB基础","level":"6.1.1","depth":2,"path":"Chapter5/MongoDB基础.md","ref":"Chapter5/MongoDB基础.md","articles":[]},{"title":"python Python操作MongoDB","level":"6.1.2","depth":2,"path":"Chapter5/Python操作MongoDB.md","ref":"Chapter5/Python操作MongoDB.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","local-video@^1.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","hide-element","code","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD HH:mm"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"local-video":{},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"Chapter5/MongoDB基础.md","mtime":"2020-05-25T13:42:22.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T00:27:47.852Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"python MongoDB基础","level":"6.1.1","depth":2,"next":{"title":"python Python操作MongoDB","level":"6.1.2","depth":2,"path":"Chapter5/Python操作MongoDB.md","ref":"Chapter5/Python操作MongoDB.md","articles":[]},"previous":{"title":"python MongoDB数据库","level":"6.1","depth":1,"path":"Chapter5/README.md","ref":"Chapter5/README.md","articles":[{"title":"python MongoDB基础","level":"6.1.1","depth":2,"path":"Chapter5/MongoDB基础.md","ref":"Chapter5/MongoDB基础.md","articles":[]},{"title":"python Python操作MongoDB","level":"6.1.2","depth":2,"path":"Chapter5/Python操作MongoDB.md","ref":"Chapter5/Python操作MongoDB.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter5/MongoDB基础.md","mtime":"2020-05-25T13:42:22.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T12:48:20.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1871,11 +1856,7 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
         
     
         
-        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
@@ -1887,7 +1868,11 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
         
     
         
-        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
@@ -1902,8 +1887,6 @@ db<span class="token punctuation">.</span>collection<span class="token punctuati
         <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
-
-    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

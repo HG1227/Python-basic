@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>python 正则表达式基础语法 · GitBook 使用教程</title>
+        <title>python 正则表达式基础语法 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="zhangjikai">
+        <meta name="author" content="HHG">
         
         
-    
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
@@ -26,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -50,11 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
@@ -66,11 +61,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -101,11 +100,7 @@
         
     
 
-
-    
-
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -120,15 +115,6 @@
     
     
     <link rel="prev" href="./" />
-    
-
-    
-        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
-    
-    
-        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
-    
-    
     
 
     </head>
@@ -1265,7 +1251,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#python-&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x57FA;&#x7840;&#x8BED;&#x6CD5;">python &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x57FA;&#x7840;&#x8BED;&#x6CD5;</a></li><ul><li><a href="#literal">literal</a></li><li><a href="#re1re2">re1|re2</a></li><li><a href="#n">{N}</a></li><li><a href="#mn">{M,N}</a></li><li><a href="#x&#x2212;y">[&#x2026;x&#x2212;y&#x2026;]</a></li><li><a href="#d">\d</a></li><li><a href="#w">\w</a></li><li><a href="#s">\s</a></li><li><a href="#b">\b</a></li><li><a href="#n">\N</a></li><li><a href="#c">\c</a></li><li><a href="#az">\A(\Z)</a></li><li><a href="#comment">(?#comment)</a></li><li><a href="#idnameyn-">(?(id/name)Y|N )</a></li><li><a href="#&#x6216;">.* &#x6216;.+</a></li></ul></ul></div><a href="#python-&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x57FA;&#x7840;&#x8BED;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="python-&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x57FA;&#x7840;&#x8BED;&#x6CD5;"><a name="python-&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x57FA;&#x7840;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#python-&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x57FA;&#x7840;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>python &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x57FA;&#x7840;&#x8BED;&#x6CD5;</h1>
-<p><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200518154130.png"></p>
+<p><a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200518154130.png" data-lightbox="316100d3-54f5-401f-bf25-9d6e32a6e7c2" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200518154130.png" alt="undefined"></a></p>
 <h2 id="literal"><a name="literal" class="anchor-navigation-ex-anchor" href="#literal"><i class="fa fa-link" aria-hidden="true"></i></a>literal</h2>
 <p>&#x529F;&#x80FD;&#xFF1A;&#x5339;&#x914D;&#x6587;&#x672C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x9762;&#x503C; literal</p>
 <p>&#x4F8B;&#x5B50;&#xFF1A;foo</p>
@@ -1473,8 +1459,8 @@ Full match    <span class="token number">0</span><span class="token operator">-<
 ret <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">&apos;(http|https|ftp)://[^\s]+&apos;</span><span class="token punctuation">,</span>text<span class="token punctuation">)</span>  <span class="token comment">#[^\s]&#x5339;&#x914D;&#x975E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>ret<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<footer class="page-footer"><span class="copyright">   </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-25 21:42
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-05-25 
 </span></footer>
                                 
                                 </section>
@@ -1518,13 +1504,12 @@ ret <span class="token operator">=</span> re<span class="token punctuation">.</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"python 正则表达式基础语法","level":"4.1.1","depth":2,"next":{"title":"python 正则表达式 常用函数","level":"4.1.2","depth":2,"path":"Chapter3/正则表达式 常用函数.md","ref":"Chapter3/正则表达式 常用函数.md","articles":[]},"previous":{"title":"python 正则表达式","level":"4.1","depth":1,"path":"Chapter3/README.md","ref":"Chapter3/README.md","articles":[{"title":"python 正则表达式基础语法","level":"4.1.1","depth":2,"path":"Chapter3/正则表达式基础语法.md","ref":"Chapter3/正则表达式基础语法.md","articles":[]},{"title":"python 正则表达式 常用函数","level":"4.1.2","depth":2,"path":"Chapter3/正则表达式 常用函数.md","ref":"Chapter3/正则表达式 常用函数.md","articles":[]},{"title":"python 正则表达式 re.sub()","level":"4.1.3","depth":2,"path":"Chapter3/正则表达式 re.sub.md","ref":"Chapter3/正则表达式 re.sub.md","articles":[]},{"title":"python 正则表达式 match()与search()","level":"4.1.4","depth":2,"path":"Chapter3/正则表达式 re.match与re.search.md","ref":"Chapter3/正则表达式 re.match与re.search.md","articles":[]},{"title":"python 正则表达式 re.findall()与re.finditer()","level":"4.1.5","depth":2,"path":"Chapter3/正则表达式 re.findall与re.finditer.md","ref":"Chapter3/正则表达式 re.findall与re.finditer.md","articles":[]},{"title":"python 正则表达式 re.compile()","level":"4.1.6","depth":2,"path":"Chapter3/正则表达式 re.compile.md","ref":"Chapter3/正则表达式 re.compile.md","articles":[]},{"title":"python 正则表达式 flags 参数","level":"4.1.7","depth":2,"path":"Chapter3/正则表达式 flags 参数.md","ref":"Chapter3/正则表达式 flags 参数.md","articles":[]},{"title":"python 正则表达式 去优先级，选择","level":"4.1.8","depth":2,"path":"Chapter3/正则表达式 去优先级，选择.md","ref":"Chapter3/正则表达式 去优先级，选择.md","articles":[]},{"title":"python 正则表达式 模式匹配与正则表达式 一","level":"4.1.9","depth":2,"path":"Chapter3/正则表达式 模式匹配与正则表达式一.md","ref":"Chapter3/正则表达式 模式匹配与正则表达式一.md","articles":[]},{"title":"python 正则表达式 模式匹配与正则表达式 二","level":"4.1.10","depth":2,"path":"Chapter3/正则表达式 模式匹配与正则表达式二.md","ref":"Chapter3/正则表达式 模式匹配与正则表达式二.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","local-video@^1.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","hide-element","code","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD HH:mm"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"local-video":{},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"Chapter3/正则表达式基础语法.md","mtime":"2020-05-25T13:42:22.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T00:27:47.852Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"python 正则表达式基础语法","level":"4.1.1","depth":2,"next":{"title":"python 正则表达式 常用函数","level":"4.1.2","depth":2,"path":"Chapter3/正则表达式 常用函数.md","ref":"Chapter3/正则表达式 常用函数.md","articles":[]},"previous":{"title":"python 正则表达式","level":"4.1","depth":1,"path":"Chapter3/README.md","ref":"Chapter3/README.md","articles":[{"title":"python 正则表达式基础语法","level":"4.1.1","depth":2,"path":"Chapter3/正则表达式基础语法.md","ref":"Chapter3/正则表达式基础语法.md","articles":[]},{"title":"python 正则表达式 常用函数","level":"4.1.2","depth":2,"path":"Chapter3/正则表达式 常用函数.md","ref":"Chapter3/正则表达式 常用函数.md","articles":[]},{"title":"python 正则表达式 re.sub()","level":"4.1.3","depth":2,"path":"Chapter3/正则表达式 re.sub.md","ref":"Chapter3/正则表达式 re.sub.md","articles":[]},{"title":"python 正则表达式 match()与search()","level":"4.1.4","depth":2,"path":"Chapter3/正则表达式 re.match与re.search.md","ref":"Chapter3/正则表达式 re.match与re.search.md","articles":[]},{"title":"python 正则表达式 re.findall()与re.finditer()","level":"4.1.5","depth":2,"path":"Chapter3/正则表达式 re.findall与re.finditer.md","ref":"Chapter3/正则表达式 re.findall与re.finditer.md","articles":[]},{"title":"python 正则表达式 re.compile()","level":"4.1.6","depth":2,"path":"Chapter3/正则表达式 re.compile.md","ref":"Chapter3/正则表达式 re.compile.md","articles":[]},{"title":"python 正则表达式 flags 参数","level":"4.1.7","depth":2,"path":"Chapter3/正则表达式 flags 参数.md","ref":"Chapter3/正则表达式 flags 参数.md","articles":[]},{"title":"python 正则表达式 去优先级，选择","level":"4.1.8","depth":2,"path":"Chapter3/正则表达式 去优先级，选择.md","ref":"Chapter3/正则表达式 去优先级，选择.md","articles":[]},{"title":"python 正则表达式 模式匹配与正则表达式 一","level":"4.1.9","depth":2,"path":"Chapter3/正则表达式 模式匹配与正则表达式一.md","ref":"Chapter3/正则表达式 模式匹配与正则表达式一.md","articles":[]},{"title":"python 正则表达式 模式匹配与正则表达式 二","level":"4.1.10","depth":2,"path":"Chapter3/正则表达式 模式匹配与正则表达式二.md","ref":"Chapter3/正则表达式 模式匹配与正则表达式二.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter3/正则表达式基础语法.md","mtime":"2020-05-25T13:42:22.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T12:48:20.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1557,11 +1542,7 @@ ret <span class="token operator">=</span> re<span class="token punctuation">.</s
         
     
         
-        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
@@ -1573,7 +1554,11 @@ ret <span class="token operator">=</span> re<span class="token punctuation">.</s
         
     
         
-        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
@@ -1588,8 +1573,6 @@ ret <span class="token operator">=</span> re<span class="token punctuation">.</s
         <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
-
-    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

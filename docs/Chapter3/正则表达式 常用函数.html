@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>python 正则表达式 常用函数 · GitBook 使用教程</title>
+        <title>python 正则表达式 常用函数 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="zhangjikai">
+        <meta name="author" content="HHG">
         
         
-    
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
@@ -26,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -50,11 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
@@ -66,11 +61,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -101,11 +100,7 @@
         
     
 
-
-    
-
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -120,15 +115,6 @@
     
     
     <link rel="prev" href="正则表达式基础语法.html" />
-    
-
-    
-        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
-    
-    
-        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
-    
-    
     
 
     </head>
@@ -1284,15 +1270,56 @@ b <span class="token operator">=</span> re<span class="token punctuation">.</spa
 <h2 id="1&#x3001;match"><a name="1&#x3001;match" class="anchor-navigation-ex-anchor" href="#1&#x3001;match"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;match</h2>
 <pre class="language-"><code class="lang-python">re<span class="token punctuation">.</span>match<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">[</span><span class="token punctuation">,</span> flags<span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
-<p>&#x4ECE;&#x9996;&#x5B57;&#x6BCD;&#x5F00;&#x59CB;&#x5F00;&#x59CB;&#x5339;&#x914D;&#xFF0C;string&#x5982;&#x679C;&#x5305;&#x542B;pattern&#x5B50;&#x4E32;&#xFF0C;&#x5219;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;Match&#x5BF9;&#x8C61;&#xFF0C;&#x5931;&#x8D25;&#x5219;&#x8FD4;&#x56DE;None&#xFF0C;&#x82E5;&#x8981;&#x5B8C;&#x5168;&#x5339;&#x914D;&#xFF0C;pattern&#x8981;&#x4EE5;$&#x7ED3;&#x5C3E;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x4ECE;string&#x7684;pos&#x4E0B;&#x6807;&#x5904;&#x8D77;&#x5C1D;&#x8BD5;&#x5339;&#x914D;pattern&#xFF1B;&#x5982;&#x679C;pattern&#x7ED3;&#x675F;&#x65F6;&#x4ECD;&#x53EF;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Match&#x5BF9;&#x8C61;&#xFF1B;&#x5982;&#x679C;&#x5339;&#x914D;&#x8FC7;&#x7A0B;&#x4E2D;pattern&#x65E0;&#x6CD5;&#x5339;&#x914D;&#xFF0C;&#x6216;&#x8005;&#x5339;&#x914D;&#x672A;&#x7ED3;&#x675F;&#x5C31;&#x5DF2;&#x5230;&#x8FBE;endpos&#xFF0C;&#x5219;&#x8FD4;&#x56DE;None&#x3002;
+pos&#x548C;endpos&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x5206;&#x522B;&#x4E3A;0&#x548C;len(string)&#xFF1B;re.match()&#x65E0;&#x6CD5;&#x6307;&#x5B9A;&#x8FD9;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;flags&#x7528;&#x4E8E;&#x7F16;&#x8BD1;pattern&#x65F6;&#x6307;&#x5B9A;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x3002;
+&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x5339;&#x914D;&#x3002;&#x5F53;pattern&#x7ED3;&#x675F;&#x65F6;&#x82E5;string&#x8FD8;&#x6709;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#xFF0C;&#x4ECD;&#x7136;&#x89C6;&#x4E3A;&#x6210;&#x529F;&#x3002;&#x60F3;&#x8981;&#x5B8C;&#x5168;&#x5339;&#x914D;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8868;&#x8FBE;&#x5F0F;&#x672B;&#x5C3E;&#x52A0;&#x4E0A;&#x8FB9;&#x754C;&#x5339;&#x914D;&#x7B26;&apos;$&apos;&#x3002;</p>
 <h2 id="2&#x3001;search"><a name="2&#x3001;search" class="anchor-navigation-ex-anchor" href="#2&#x3001;search"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;search</h2>
 <pre class="language-"><code class="lang-python">re<span class="token punctuation">.</span>search<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">[</span><span class="token punctuation">,</span> flags<span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
-<p>&#x82E5;string&#x4E2D;&#x5305;&#x542B;pattern&#x5B50;&#x4E32;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;Match&#x5BF9;&#x8C61;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;None&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;string&#x4E2D;&#x5B58;&#x5728;&#x591A;&#x4E2A;pattern&#x5B50;&#x4E32;&#xFF0C;&#x53EA;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x67E5;&#x627E;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x5B50;&#x4E32;&#x3002;&#x4ECE;string&#x7684;pos&#x4E0B;&#x6807;&#x5904;&#x8D77;&#x5C1D;&#x8BD5;&#x5339;&#x914D;pattern&#xFF0C;&#x5982;&#x679C;pattern&#x7ED3;&#x675F;&#x65F6;&#x4ECD;&#x53EF;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Match&#x5BF9;&#x8C61;&#xFF1B;&#x82E5;&#x65E0;&#x6CD5;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x5C06;pos&#x52A0;1&#x540E;&#x91CD;&#x65B0;&#x5C1D;&#x8BD5;&#x5339;&#x914D;&#xFF1B;&#x76F4;&#x5230;pos=endpos&#x65F6;&#x4ECD;&#x65E0;&#x6CD5;&#x5339;&#x914D;&#x5219;&#x8FD4;&#x56DE;None&#x3002;
+pos&#x548C;endpos&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x5206;&#x522B;&#x4E3A;0&#x548C;len(string))&#xFF1B;re.search()&#x65E0;&#x6CD5;&#x6307;&#x5B9A;&#x8FD9;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;flags&#x7528;&#x4E8E;&#x7F16;&#x8BD1;pattern&#x65F6;&#x6307;&#x5B9A;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x3002;</p>
 <h2 id="3&#x3001;findall"><a name="3&#x3001;findall" class="anchor-navigation-ex-anchor" href="#3&#x3001;findall"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;findall</h2>
 <pre class="language-"><code class="lang-python">re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">[</span><span class="token punctuation">,</span> flags<span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
 <p>&#x8FD4;&#x56DE;string&#x4E2D;&#x6240;&#x6709;&#x4E0E;pattern&#x76F8;&#x5339;&#x914D;&#x7684;&#x5168;&#x90E8;&#x5B57;&#x4E32;&#xFF0C;&#x8FD4;&#x56DE;&#x5F62;&#x5F0F;&#x4E3A;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x5F53;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#x542B;&#x6709;&#x591A;&#x4E2A;&#x5339;&#x914D;&#x503C;&#x7684;&#x65F6;&#x5019;&#x8FD4;&#x56DE;&#x7684;&#x4E3A;&#x5143;&#x7EC4;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x8868;&#x683C;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span>  <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span>1</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>&#x5B66;&#x53F7;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>&#x59D3;&#x540D;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>1001<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>&#x6768;&#x79C0;&#x748B;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>1002<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>&#x4E25;&#x5A1C;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre><pre class="language-"><code class="lang-python"><span class="token comment"># coding=utf-8  </span>
+<span class="token keyword">import</span> re  
+<span class="token keyword">import</span> urllib
+content <span class="token operator">=</span> urllib<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span><span class="token string">&quot;test.html&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#&#x6253;&#x5F00;&#x672C;&#x5730;&#x6587;&#x4EF6;</span>
+
+<span class="token comment">#&#x83B7;&#x53D6;&lt;tr&gt;&lt;/tr&gt;&#x95F4;&#x5185;&#x5BB9;</span>
+res <span class="token operator">=</span> <span class="token string">r&apos;&lt;tr&gt;(.*?)&lt;/tr&gt;&apos;</span>
+texts <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>res<span class="token punctuation">,</span> content<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token operator">|</span>re<span class="token punctuation">.</span>M<span class="token punctuation">)</span>
+<span class="token keyword">for</span> m <span class="token keyword">in</span> texts<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> m
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+texts:
+[&apos;&lt;th&gt;&#x5B66;&#x53F7;&lt;/th&gt;&lt;th&gt;&#x59D3;&#x540D;&lt;/th&gt;&apos;,
+ &apos;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;&#x6768;&#x79C0;&#x748B;&lt;/td&gt;&apos;,
+ &apos;&lt;td&gt;1002&lt;/td&gt;&lt;td&gt;&#x4E25;&#x5A1C;&lt;/td&gt;&apos;]
+&quot;&quot;&quot;</span>
+
+<span class="token comment">#&#x76F4;&#x63A5;&#x83B7;&#x53D6;&lt;td&gt;&lt;/td&gt;&#x95F4;&#x5185;&#x5BB9;</span>
+res <span class="token operator">=</span> <span class="token string">r&apos;&lt;td&gt;(.*?)&lt;/td&gt;&lt;td&gt;(.*?)&lt;/td&gt;&apos;</span>    
+texts <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>res<span class="token punctuation">,</span> content<span class="token punctuation">,</span> re<span class="token punctuation">.</span>S<span class="token operator">|</span>re<span class="token punctuation">.</span>M<span class="token punctuation">)</span>
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+texts:
+[(&apos;1001&apos;, &apos;&#x6768;&#x79C0;&#x748B;&apos;), (&apos;1002&apos;, &apos;&#x4E25;&#x5A1C;&apos;)]
+&quot;&quot;&quot;</span>
+<span class="token keyword">for</span> m <span class="token keyword">in</span> texts<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> m<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>m<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code></pre>
 <h2 id="4&#x3001;finditer"><a name="4&#x3001;finditer" class="anchor-navigation-ex-anchor" href="#4&#x3001;finditer"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;finditer</h2>
 <pre class="language-"><code class="lang-python"> re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">[</span><span class="token punctuation">,</span> flags<span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
@@ -1301,6 +1328,7 @@ b <span class="token operator">=</span> re<span class="token punctuation">.</spa
 <h2 id="5&#x3001;split"><a name="5&#x3001;split" class="anchor-navigation-ex-anchor" href="#5&#x3001;split"><i class="fa fa-link" aria-hidden="true"></i></a>5&#x3001;split</h2>
 <pre class="language-"><code class="lang-python">split<span class="token punctuation">(</span>string<span class="token punctuation">[</span><span class="token punctuation">,</span> maxsplit<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">|</span> re<span class="token punctuation">.</span>split<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> string<span class="token punctuation">[</span><span class="token punctuation">,</span> maxsplit<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 </code></pre>
+<p>&#x6309;&#x7167;&#x80FD;&#x591F;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x5C06;string&#x5206;&#x5272;&#x540E;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x3002;maxsplit&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6700;&#x5927;&#x5206;&#x5272;&#x6B21;&#x6570;&#xFF0C;&#x4E0D;&#x6307;&#x5B9A;&#x5C06;&#x5168;&#x90E8;&#x5206;&#x5272;&#x3002;</p>
 <pre class="language-"><code class="lang-python"><span class="token keyword">import</span> re
 
 p <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r&apos;\d+&apos;</span><span class="token punctuation">)</span>
@@ -1420,8 +1448,8 @@ StopIteration
 <ol>
 <li><a href="https://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html" blank="" target="_blank">Python&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6307;&#x5357;</a> </li>
 </ol>
-<footer class="page-footer"><span class="copyright">   </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-25 21:42
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-05-26 
 </span></footer>
                                 
                                 </section>
@@ -1465,13 +1493,12 @@ StopIteration
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"python 正则表达式 常用函数","level":"4.1.2","depth":2,"next":{"title":"python 正则表达式 re.sub()","level":"4.1.3","depth":2,"path":"Chapter3/正则表达式 re.sub.md","ref":"Chapter3/正则表达式 re.sub.md","articles":[]},"previous":{"title":"python 正则表达式基础语法","level":"4.1.1","depth":2,"path":"Chapter3/正则表达式基础语法.md","ref":"Chapter3/正则表达式基础语法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","local-video@^1.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","hide-element","code","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD HH:mm"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"local-video":{},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"Chapter3/正则表达式 常用函数.md","mtime":"2020-05-25T13:42:22.969Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T00:27:47.852Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"python 正则表达式 常用函数","level":"4.1.2","depth":2,"next":{"title":"python 正则表达式 re.sub()","level":"4.1.3","depth":2,"path":"Chapter3/正则表达式 re.sub.md","ref":"Chapter3/正则表达式 re.sub.md","articles":[]},"previous":{"title":"python 正则表达式基础语法","level":"4.1.1","depth":2,"path":"Chapter3/正则表达式基础语法.md","ref":"Chapter3/正则表达式基础语法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter3/正则表达式 常用函数.md","mtime":"2020-05-26T13:01:49.589Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T12:48:20.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1504,11 +1531,7 @@ StopIteration
         
     
         
-        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
@@ -1520,7 +1543,11 @@ StopIteration
         
     
         
-        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
@@ -1535,8 +1562,6 @@ StopIteration
         <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
-
-    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

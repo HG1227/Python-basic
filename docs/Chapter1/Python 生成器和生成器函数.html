@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python 生成器和生成器函数 · GitBook 使用教程</title>
+        <title>Python 生成器和生成器函数 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="zhangjikai">
+        <meta name="author" content="HHG">
         
         
-    
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
@@ -26,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -50,11 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
@@ -66,11 +61,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -101,11 +100,7 @@
         
     
 
-
-    
-
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -120,15 +115,6 @@
     
     
     <link rel="prev" href="Python 断言assert.html" />
-    
-
-    
-        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
-    
-    
-        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
-    
-    
     
 
     </head>
@@ -1569,7 +1555,7 @@ f<span class="token operator">=</span><span class="token builtin">open</span><sp
 <p>&#x5C06; numbers &#x53D8;&#x91CF;&#x4F7F;&#x7528; even_only &#x51FD;&#x6570;&#x88C5;&#x9970;&#x540E;&#xFF0C; sum_even_only_v2 &#x51FD;&#x6570;&#x5185;&#x90E8;&#x4FBF;&#x4E0D;&#x7528;&#x7EE7;&#x7EED;&#x5173;&#x6CE8;&#x201C;&#x5076;&#x6570;&#x8FC7;&#x6EE4;&#x201D;&#x903B;&#x8F91;&#x4E86;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x7B80;&#x5355;&#x5B8C;&#x6210;&#x6C42;&#x548C;&#x5373;&#x53EF;&#x3002;</p>
 <p>&#x5728;&#x7F51;&#x7AD9;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x6BCF; 30 &#x5929;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x7684;&#x5468;&#x671F;&#x811A;&#x672C;&#xFF0C;&#x5B83;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#x662F;&#x67E5;&#x8BE2;&#x8FC7;&#x53BB; 30 &#x5929;&#x5185;&#xFF0C;&#x5728;&#x6BCF;&#x5468;&#x672B;&#x7279;&#x5B9A;&#x65F6;&#x95F4;&#x6BB5;&#x767B;&#x5F55;&#x8FC7;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x7136;&#x540E;&#x4E3A;&#x5176;&#x53D1;&#x9001;&#x5956;&#x52B1;&#x79EF;&#x5206;&#x3002;</p>
 <p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<p><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200503144355.png"></p>
+<p><a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200503144355.png" data-lightbox="f2795260-65c0-4f3a-896a-d5d89e289378" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200503144355.png" alt="undefined"></a></p>
 <p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x7531;&#x4E24;&#x5C42;&#x5FAA;&#x73AF;&#x6784;&#x6210;&#x3002;&#x5916;&#x5C42;&#x5FAA;&#x73AF;&#x7684;&#x804C;&#x8D23;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x83B7;&#x53D6;&#x8FC7;&#x53BB; 30 &#x5929;&#x5185;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A; UNIX &#x65F6;&#x95F4;&#x6233;&#x3002;&#x4E4B;&#x540E;&#x7531;&#x5185;&#x5C42;&#x5FAA;&#x73AF;&#x4F7F;&#x7528;&#x8FD9;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x6233;&#x8FDB;&#x884C;&#x79EF;&#x5206;&#x53D1;&#x9001;&#x3002;</p>
 <p><strong>&#x6574;&#x4E2A;&#x5FAA;&#x73AF;&#x4F53;&#x5176;&#x5B9E;&#x662F;&#x7531;&#x4E24;&#x4E2A;&#x5B8C;&#x5168;&#x65E0;&#x5173;&#x7684;&#x4EFB;&#x52A1;&#x6784;&#x6210;&#x7684;&#xFF1A;&#x201C;&#x6311;&#x9009;&#x65E5;&#x671F;&#x4E0E;&#x51C6;&#x5907;&#x65F6;&#x95F4;&#x6233;&#x201D; &#x4EE5;&#x53CA; &#x201C;&#x53D1;&#x9001;&#x5956;&#x52B1;&#x79EF;&#x5206;&#x201D;</strong>&#x3002;</p>
 <p>&#x67D0;&#x65E5;&#xFF0C;&#x4EA7;&#x54C1;&#x627E;&#x8FC7;&#x6765;&#x8BF4;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x7528;&#x6237;&#x5468;&#x672B;&#x534A;&#x591C;&#x4E0D;&#x7761;&#x89C9;&#xFF0C;&#x8FD8;&#x5728;&#x5237;&#x6211;&#x4EEC;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x7ED9;&#x4ED6;&#x4EEC;&#x53D1;&#x901A;&#x77E5;&#x8BA9;&#x4ED6;&#x4EEC;&#x4EE5;&#x540E;&#x65E9;&#x70B9;&#x7761;&#x89C9;&#x3002;&#x4E8E;&#x662F;&#x65B0;&#x9700;&#x6C42;&#x51FA;&#x73B0;&#x4E86;&#xFF1A;&#x201C;<strong>&#x7ED9;&#x8FC7;&#x53BB; 30 &#x5929;&#x5185;&#x5728;&#x5468;&#x672B;&#x51CC;&#x6668; 3 &#x70B9;&#x5230; 5 &#x70B9;&#x767B;&#x5F55;&#x8FC7;&#x7684;&#x7528;&#x6237;&#x53D1;&#x9001;&#x4E00;&#x6761;&#x901A;&#x77E5;&#x201D;&#x3002;</strong></p>
@@ -1608,8 +1594,8 @@ f<span class="token operator">=</span><span class="token builtin">open</span><sp
         <span class="token keyword">for</span> record <span class="token keyword">in</span> LoginRecord<span class="token punctuation">.</span>filter_by_range<span class="token punctuation">(</span>ts_start<span class="token punctuation">,</span> ts_end<span class="token punctuation">)</span><span class="token punctuation">:</span>
             notify_user<span class="token punctuation">(</span>record<span class="token punctuation">.</span>user_id<span class="token punctuation">,</span> <span class="token string">&apos;You should sleep more&apos;</span><span class="token punctuation">)</span>
 </code></pre>
-<footer class="page-footer"><span class="copyright">   </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-25 21:42
+<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-05-25 
 </span></footer>
                                 
                                 </section>
@@ -1653,13 +1639,12 @@ f<span class="token operator">=</span><span class="token builtin">open</span><sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python 生成器和生成器函数","level":"2.1.19","depth":2,"next":{"title":"Python chr()和ord()函数","level":"2.1.20","depth":2,"path":"Chapter1/Python chr和ord函数.md","ref":"Chapter1/Python chr和ord函数.md","articles":[]},"previous":{"title":"Python 断言assert","level":"2.1.18","depth":2,"path":"Chapter1/Python 断言assert.md","ref":"Chapter1/Python 断言assert.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","local-video@^1.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","hide-element","code","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD HH:mm"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"local-video":{},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"Chapter1/Python 生成器和生成器函数.md","mtime":"2020-05-25T13:42:22.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T00:27:47.852Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Python 生成器和生成器函数","level":"2.1.19","depth":2,"next":{"title":"Python chr()和ord()函数","level":"2.1.20","depth":2,"path":"Chapter1/Python chr和ord函数.md","ref":"Chapter1/Python chr和ord函数.md","articles":[]},"previous":{"title":"Python 断言assert","level":"2.1.18","depth":2,"path":"Chapter1/Python 断言assert.md","ref":"Chapter1/Python 断言assert.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter1/Python 生成器和生成器函数.md","mtime":"2020-05-25T13:42:22.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T12:48:20.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1692,11 +1677,7 @@ f<span class="token operator">=</span><span class="token builtin">open</span><sp
         
     
         
-        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
@@ -1708,7 +1689,11 @@ f<span class="token operator">=</span><span class="token builtin">open</span><sp
         
     
         
-        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
@@ -1723,8 +1708,6 @@ f<span class="token operator">=</span><span class="token builtin">open</span><sp
         <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
-
-    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
