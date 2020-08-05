@@ -1,30 +1,50 @@
 /* CSS for website */
 
-h1{
-    padding-bottom: 1px;
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2rem;
+    line-height: 1.3;
+	font-weight: bold;
 	color: #452489;
-	font-weight: bold;
-}
-h2{
+	text-align: center ;
 	
-    border-bottom: 1px solid #EFEAEA;
-    padding-bottom: 1px;
-	color: #452489;
-	font-weight: bold;
 }
-h3{
-	
-    
-    padding-bottom: 1px;
-	color: #483d8b;
+
+h2 {
 	font-weight: bold;
+	color: #336699;
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0 15px;
+	
+	padding-left:12px;
+	border-left: 9px solid #cd5c5c;
 }
-h4{
-	
-    
-    padding-bottom: 1px;
-	color: #008080;
+
+h3 {
+	color: #4f8a8b;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+	/*padding-left:10px;*/
+	/*border-left: 5px solid #cd5c5c;*/
+}
+
+h4 {
+	color: #4f8a8b;
 	font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h5 {
+	color: #4f8a8b;
+    font-size: 1rem;
+}
+
+h6 {
+	color: #4f8a8b;
+    font-size: 1rem;
+    color: #777;
 }
 
 .markdown-section>:first-child {
@@ -35,16 +55,21 @@ h4{
 }
 
 .book .book-body .page-wrapper .page-inner section.normal {
-    min-height:350px;
+    min-width: 110%;
+	margin-left: auto;
+	margin-right: auto;
+	min-height:350px;
     margin-bottom: 20px;
+	
 }
 
 
 
 .book .book-body .page-wrapper .page-inner section.normal hr {
+	
     height: 0px;
     padding: 0;
-    margin: 1.1em 0;
+    margin: 1 em 0;
     overflow: hidden;
 
 }
@@ -64,11 +89,13 @@ h4{
 
 /*设置代码格式*/
 .book-body  code {
-	padding: 1px 2px;
+    padding: 1px 2px;
+    margin: 0 2px;
+    font-size: 101%;
     border-radius: 3px;
-    font-size: 16px;
-	background-color:rgb(143, 115, 115,0.25);
-	color:#222020;
+    color: #383e56;
+    background-color: rgb(143, 115, 115,0.25);
+    font-family: Monaco,Menlo,"Microsoft YaHei Mono",Consolas,"Courier New",monospace,sans-serif;
 	/*
     color: #00008b;
     background-color: rgba(0, 0, 0, 0.1);*/
@@ -97,18 +124,18 @@ h4{
 
 /*正文字体设置*/
 .book .book-body .page-wrapper  section.normal {
-    font-size: 16px;
-	letter-spacing: 0.2;
+	max-width: 960px;
+    font-size: 17px;
+	letter-spacing: 0.15;
 	
-    font-family:'Ubuntu', 'Source Sans Pro', sans-serif !important;
+    font-family:'Ubuntu', 'Source Sans Pro', 'Microsoft YaHei' !important;
 }
-p{ line-height:10 px} 
 
 pre[class*="language-"] {
     /*border: none;
     background-color: #ffffe0;*/
     font-size: 1.2em;
-    line-height: 0.9 em;
+    line-height: 1.0 em;
 
 }
 
@@ -176,20 +203,37 @@ table tr td:last-child {
 
 
 blockquote {
-    border-left: 5px solid #2f4f4f;
-    padding: 2px 10px;
-    color: #777;
-    background-color: rgba(128, 128, 128, 0.12);
-	line-height: 0.9 em;
+    color: #444;
+    border-left: 5px solid #D6DBDF;
+    padding-left: 15px;
+    background: rgba(112,138,153,.1);
+    padding: 10px 20px;
+    margin: 0 0 20px;
+
 }
 
 
 strong {
-	color: RGB(198, 99, 99);
+	color: #616161;
     padding: 0 1px;
 }
 
 
+
+/*修改图片*/
+img {
+    border-radius: 3px;
+	filter:drop-shadow(3px 3px 2px gray);
+    font-family: var(--font-monospace);
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+	margin-left: auto; 
+    margin-right:auto; 
+    display:block;
+
+
+}
 
 
 
